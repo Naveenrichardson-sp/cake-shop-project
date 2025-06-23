@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>Order Details</h2>
+
+  <div class="row my-5">
+  <div class="col-md-3">
+  <label for="startDate" class="form-label">Start Date</label>
+  <input id="startDate" type="date" class="form-control" [(ngModel)]="startDate">
+</div>
+<div class="col-md-3">
+  <label for="endDate" class="form-label">End Date</label>
+  <input id="endDate" type="date" class="form-control" [(ngModel)]="endDate">
+</div>
+  <div class="col-md-3">
+    <label for="eventOccasion" class="form-label">Event Occasion</label>
+    <select id="eventOccasion" class="form-select" [(ngModel)]="filterOccasion">
+      <option value="">All Occasions</option>
+      <option value="Birthday">Birthday</option>
+      <option value="Wedding Anniversaries">Wedding Anniversaries</option>
+      <option value="Other Occasions">Other Occasions</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <button class="btn btn-primary w-100 mt-4" (click)="clearFilters()">Clear Filters</button>
+  </div>
+</div>
+
+<!-- Data Table -->
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Occasion</th>
+      <th>Date</th>
+      <th>Cake Type</th>
+      <th>Cake Weight</th>
+      <th>Cake Card</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let order of filteredOrders">
+      <td>{{ order.name }}</td>
+      <td>{{ order.phoneNumber }}</td>
+      <td>{{ order.eventOccasion }}</td>
+      <td>{{ order.eventDate }}</td>
+      <td>{{ order.cakeType }}</td>
+      <td>{{ order.cakeWeight }}</td>
+      <td>{{ order.cakeCard }}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>

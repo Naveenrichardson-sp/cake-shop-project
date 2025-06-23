@@ -1,0 +1,85 @@
+<div class="container-fluid contact position-relative px-5" style="margin-top: 90px;">
+    <div class="container">
+        <div class="row g-5 mb-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-primary border-inner text-center text-white p-5">
+                    <i class="bi bi-geo-alt fs-1 text-white"></i>
+                    <h6 class="text-uppercase my-2">Our Office</h6>
+                    <span>123 Street, New York, USA</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-primary border-inner text-center text-white p-5">
+                    <i class="bi bi-envelope-open fs-1 text-white"></i>
+                    <h6 class="text-uppercase my-2">Email Us</h6>
+                    <span>info@example.com</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-primary border-inner text-center text-white p-5">
+                    <i class="bi bi-phone-vibrate fs-1 text-white"></i>
+                    <h6 class="text-uppercase my-2">Call Us</h6>
+                    <span>+012 345 6789</span>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="Your Name"
+                                style="height: 55px;" formControlName="name">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="Your Phone"
+                                style="height: 55px;" formControlName="phoneNumber">
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-select bg-light px-4" style="height: 55px;" formControlName="eventOccasion">
+                                <option value="" disabled>Select Occasion</option>
+                                <option value="Birthday">Birthday</option>
+                                <option value="Wedding Anniversaries">Wedding Anniversaries</option>
+                                <option value="Other Occasions">Other Occasions</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control bg-light border-0 px-4" placeholder="Event Date"
+                                style="height: 55px;" formControlName="eventDate">
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-select bg-light px-4" style="height: 55px;" formControlName="cakeType">
+                                <option value="" disabled>Select Cake Type</option>
+                                <option value="chocolate">chocolate</option>
+                                <option value="vanilla">vanilla</option>
+                                <option value="red velvet">red velvet</option>
+                                <option value="lemon">lemon</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-select bg-light px-4" style="height: 55px;"
+                                formControlName="cakeWeight">
+                                <option value="" disabled>Select Cake Weight</option>
+                                <option value="1kg">1kg</option>
+                                <option value="2kg">2kg</option>
+                                <option value="3kg">3kg</option>
+                                <option value="Custom">Custom</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Cake Card"
+                                formControlName="cakeCard"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <button class="btn btn-primary border-inner w-100 py-3" type="submit">Order Now</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Show success message when submitted -->
+                <div *ngIf="submitted" class="alert alert-success text-center mt-4">
+                    Your order has been submitted successfully!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
