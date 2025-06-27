@@ -23,6 +23,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { BrowserModule } from '@angular/platform-browser';
 import { BakingEnquiryComponent } from './baking-enquiry/baking-enquiry.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     AdminDashboardComponent,
     BakingEnquiryComponent,
     GalleryComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

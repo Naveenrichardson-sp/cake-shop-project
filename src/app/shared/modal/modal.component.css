@@ -1,0 +1,13 @@
+.modal-header {
+    background: var(--dark);
+    color: var(--primary);
+}
+
+.modal-body {
+    background: var(--secondary);
+    color: var(--dark);
+}
+
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
