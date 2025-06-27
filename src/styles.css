@@ -43,24 +43,32 @@
 
 .border-inner {
     position: relative;
-    padding: 20px 25px !important;
+}
+
+.btn.btn:hover {
+    background-color: var(--primary);
+    background-color: #b36308;
+    border-color: #b36308;
 }
 
 h1,
 h2,
 .font-weight-bold {
+    font-family: 'Oswald', sans-serif;
     font-weight: 700 !important;
 }
 
 h3,
 h4,
 .font-weight-semi-bold {
+    font-family: 'Oswald', sans-serif;
     font-weight: 600 !important;
 }
 
 h5,
 h6,
 .font-weight-medium {
+    font-family: 'Oswald', sans-serif;
     font-weight: 500 !important;
 }
 
@@ -154,8 +162,15 @@ h6,
 }
 
 .hero-header {
-    background: url(../src/assets/img/hero.jpg) top right no-repeat;
     background-size: cover;
+}
+
+.hero-images-1 {
+  background: url(../src/assets/img/image-1.jpg) top right no-repeat;
+}
+
+.hero-images-2 {
+  background: url(../src/assets/img/image-2.jpg) center left no-repeat;
 }
 
 .widget-price {

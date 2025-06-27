@@ -39,13 +39,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto mx-lg-auto py-0">
-                <a routerLink="" class="nav-item nav-link active">Home</a>
-                <a routerLink="/about" class="nav-item nav-link">About Us</a>
-                <a routerLink="/menu" class="nav-item nav-link">Menu & Pricing</a>
-                 <a routerLink="/team" class="nav-item nav-link">Master Chefs</a>
-                 <a routerLink="/service" class="nav-item nav-link">Service</a>
-                <a routerLink="/bakingclass" class="nav-item nav-link">Baking Class</a>
-                <a routerLink="/contact" class="nav-item nav-link">Contact Us</a>
+                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Home</a>
+                <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">About Us</a>
+                <a routerLink="/menu" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Menu & Pricing</a>
+                 <a routerLink="/team" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Master Chefs</a>
+                 <a routerLink="/service" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Service</a>
+                <a routerLink="/bakingclass" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Baking Class</a>
+                <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Contact Us</a>
             </div>
         </div>
     </nav>
