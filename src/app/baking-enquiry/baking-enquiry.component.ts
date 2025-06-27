@@ -19,16 +19,16 @@ export class BakingEnquiryComponent implements OnInit {
 
     this.bakingForm = this.fb.group({
           name: ['', Validators.required],
-          phoneNumber: ['', [
+          contactNo: ['', [
             Validators.required,
             Validators.pattern('^[0-9]*$'), // Only numbers
             Validators.minLength(10),
             Validators.maxLength(10)        // Max 10 digits
           ]
           ],
-          course: ['', Validators.required],
+          courseType: ['', Validators.required],
           email: ['', [Validators.required, Validators.email]],
-          message: ['']
+          remarks: ['']
         });
         
 
@@ -48,11 +48,10 @@ export class BakingEnquiryComponent implements OnInit {
           });
           this.bakingForm.reset({
             name: '',
-            phoneNumber: '',
-            course: '', // This will select the placeholder
+            contactNo: '',
+            courseType: '', // This will select the placeholder
             email: '',
-            message: '',
-            cakeCard: ''
+            remarks: '',
           });
           this.submitted = true;
           setTimeout(() => {

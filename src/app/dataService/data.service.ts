@@ -8,7 +8,7 @@ import { BakingEnquiry, BakingEnquiryResponse } from '../model/bakingEnquiry';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = 'https://15.156.44.164:8080/idw-api/api/'; // Replace with your API endpoint
+  private apiUrl = 'https://api.wallet4tech.click:8080/idw-api/api/'; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
 
