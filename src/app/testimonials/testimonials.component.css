@@ -1,0 +1,10 @@
+.testimonial-carousel {
+  min-height: 420px; /* Adjust as needed */
+}
+
+.testimonial-item {
+  min-height: 350px; /* Ensures each item has enough height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
