@@ -118,6 +118,10 @@ h6,
     height: 50px;
 }
 
+.contact-box {
+    min-height: 240px;
+}
+
 .btn-square,
 .btn-sm-square,
 .btn-lg-square {
