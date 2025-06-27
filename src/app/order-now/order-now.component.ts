@@ -24,7 +24,7 @@ export class OrderNowComponent implements OnInit {
         Validators.minLength(10),
         Validators.maxLength(10)        // Max 10 digits
       ]
-    ],
+      ],
       eventOccasion: ['', Validators.required],
       eventDate: ['', Validators.required],
       cakeType: ['', Validators.required],
@@ -37,6 +37,15 @@ export class OrderNowComponent implements OnInit {
   onSubmit() {
     if (this.orderForm.valid) {
       console.log('Form Data:', this.orderForm.value);
+      const order: Order = this.orderForm.value as Order;
+      this.dataService.submitOrder(order).subscribe({
+        next: (response) => {
+          console.log('Order submitted successfully:', response);
+        },
+        error: (error) => {
+          console.error('Error submitting order:', error);
+        }
+      });
       this.orderForm.reset({
         name: '',
         phoneNumber: '',
