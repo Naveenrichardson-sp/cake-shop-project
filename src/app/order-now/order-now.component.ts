@@ -16,9 +16,15 @@ export class OrderNowComponent implements OnInit {
 
   ngOnInit(): void {
 
-   this.orderForm = this.fb.group({
+    this.orderForm = this.fb.group({
       name: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
+      phoneNumber: ['', [
+        Validators.required,
+        Validators.pattern('^[0-9]*$'), // Only numbers
+        Validators.minLength(10),
+        Validators.maxLength(10)        // Max 10 digits
+      ]
+    ],
       eventOccasion: ['', Validators.required],
       eventDate: ['', Validators.required],
       cakeType: ['', Validators.required],
@@ -28,24 +34,25 @@ export class OrderNowComponent implements OnInit {
 
   }
 
-onSubmit() {
-  if (this.orderForm.valid) {
-    alert('Order submitted successfully!');
-    this.submitted = true;
-    const order: Order = this.orderForm.value;
-    this.dataService.submitOrder(order).subscribe({
-      next: (response) => {
-        this.submitted = true;
-        console.log('Order submitted successfully:', response);
-        this.orderForm.reset();
-      },
-      error: (err) => {
-        // Handle error
-      }
-    });
-  } else {
-    this.orderForm.markAllAsTouched();
+  onSubmit() {
+    if (this.orderForm.valid) {
+      console.log('Form Data:', this.orderForm.value);
+      this.orderForm.reset({
+        name: '',
+        phoneNumber: '',
+        eventOccasion: '', // This will select the placeholder
+        eventDate: '',
+        cakeType: '',
+        cakeWeight: '',
+        cakeCard: ''
+      });
+      this.submitted = true;
+      setTimeout(() => {
+        this.submitted = false;
+      }, 2000); // Success message shows for 2 seconds
+    } else {
+      this.orderForm.markAllAsTouched();
+      console.log('Form is invalid');
+    }
   }
-}
-
 }

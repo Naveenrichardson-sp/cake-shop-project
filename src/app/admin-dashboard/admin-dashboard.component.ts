@@ -10,8 +10,8 @@ import { Order } from '../model/order';
 export class AdminDashboardComponent implements OnInit {
   orders: Order[] = [];
   filterOccasion: string = '';
-  startDate: Date | null = null;
-  endDate: Date | null = null;
+  startDate: string = '';
+  endDate: string = '';
 
   constructor(private dataService: DataService) { }
 
@@ -41,8 +41,8 @@ get filteredOrders(): Order[] {
 }
 
 clearFilters() {
-  // this.startDate = '';
-  // this.endDate = '';
+  this.startDate = '';
+  this.endDate = '';
   this.filterOccasion = '';
 }
 
