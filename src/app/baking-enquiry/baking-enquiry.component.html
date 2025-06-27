@@ -1,0 +1,97 @@
+<div class="container-fluid contact position-relative px-5" style="margin-top: 90px;">
+    <div class="container">
+        <div class="row g-5 mb-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-primary border-inner text-center text-white p-5">
+                    <i class="bi bi-geo-alt fs-1 text-white"></i>
+                    <h6 class="text-uppercase my-2">Our Office</h6>
+                    <span>123 Street, New York, USA</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-primary border-inner text-center text-white p-5">
+                    <i class="bi bi-envelope-open fs-1 text-white"></i>
+                    <h6 class="text-uppercase my-2">Email Us</h6>
+                    <span>info@example.com</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-primary border-inner text-center text-white p-5">
+                    <i class="bi bi-phone-vibrate fs-1 text-white"></i>
+                    <h6 class="text-uppercase my-2">Call Us</h6>
+                    <span>+012 345 6789</span>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form [formGroup]="bakingForm" (ngSubmit)="onSubmit()">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="Your Name"
+                                style="height: 55px;" formControlName="name">
+                            <div *ngIf="bakingForm.get('name')?.touched && bakingForm.get('name')?.invalid"
+                                class="text-danger mt-1">
+                                Name is required.
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control bg-light border-0 px-4" placeholder="Your Phone"
+                                style="height: 55px;" formControlName="phoneNumber">
+                            <!-- Validation Messages -->
+                            <div *ngIf="bakingForm.get('phoneNumber')?.touched && bakingForm.get('phoneNumber')?.invalid"
+                                class="text-danger mt-1">
+                                <div *ngIf="bakingForm.get('phoneNumber')?.errors?.['required']">
+                                    Phone number is required.
+                                </div>
+                                <div *ngIf="bakingForm.get('phoneNumber')?.errors?.['pattern']">
+                                    Only numbers are allowed.
+                                </div>
+                                <div *ngIf="bakingForm.get('phoneNumber')?.errors?.['minlength']">
+                                    Phone number must be 10 digits.
+                                </div>
+                                <div *ngIf="bakingForm.get('phoneNumber')?.errors?.['maxlength']">
+                                    Phone number cannot exceed 10 digits.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-select bg-light px-4" style="height: 55px;"
+                                formControlName="course">
+                                <option value="" disabled>Select Course</option>
+                                <option value="Master Course">Master Course</option>
+                                <option value="Crash Course">Crash Course</option>
+                                <option value="Workshops">Workshops</option>
+                            </select>
+                            <div *ngIf="bakingForm.get('Course')?.touched && bakingForm.get('Course')?.invalid"
+                                class="text-danger mt-1">
+                                Course is required.
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control bg-light border-0 px-4" placeholder="Your Email"
+                                style="height: 55px;" formControlName="email">
+                            <div *ngIf="bakingForm.get('email')?.touched && bakingForm.get('email')?.invalid"
+                                class="text-danger mt-1">
+                                Email is required.
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-sm-12">
+                            <textarea class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Message"
+                                formControlName="message"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <button class="btn btn-primary border-inner w-100 py-3" type="submit">Submit Now</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Show success message when submitted -->
+                <div *ngIf="submitted" class="alert alert-success text-center mt-4">
+                    Your enquiry has been submitted successfully. Our team will contact you shortly!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

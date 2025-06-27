@@ -28,7 +28,7 @@ export class AppComponent {
  }
 
  isInnerPage(): boolean {
-    const innerPages = ['/about', '/menu', '/team', '/service', '/bakingclass', '/contact', '/order-now', '/dashboard'];
+    const innerPages = ['/about', '/menu', '/team', '/service', '/bakingclass', '/contact', '/order-now', '/dashboard', '/bakingenquiry'];
     return innerPages.some(page => this.router.url.startsWith(page));
   }
 

@@ -10,6 +10,7 @@ import { ClassDetailsComponent } from './class-details/class-details.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderNowComponent } from './order-now/order-now.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { BakingEnquiryComponent } from './baking-enquiry/baking-enquiry.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,7 @@ const routes: Routes = [
       { path: 'contact', component: ContactComponent, data: { title: 'Contact Us' } },
       { path: 'order-now', component: OrderNowComponent, data: { title: 'Order Now' } },
       { path: 'dashboard', component: AdminDashboardComponent, data: { title: 'Dashboard' } },
+      { path: 'bakingenquiry', component: BakingEnquiryComponent, data: { title: 'Baking Enquiry' } },
     ]
   },
   { path: '**', redirectTo: '' } // wildcard fallback

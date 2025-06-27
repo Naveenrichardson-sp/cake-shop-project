@@ -21,6 +21,7 @@ import { OrderNowComponent } from './order-now/order-now.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { BakingEnquiryComponent } from './baking-enquiry/baking-enquiry.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { BrowserModule } from '@angular/platform-browser';
     ContactComponent,
     OrderNowComponent,
     AdminDashboardComponent,
+    BakingEnquiryComponent,
   ],
   imports: [
     BrowserModule,
