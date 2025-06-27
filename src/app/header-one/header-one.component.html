@@ -4,7 +4,7 @@
         <div class="row gx-0">
             <div class="col-lg-4 text-center bg-secondary py-3">
                 <div class="d-inline-flex align-items-center justify-content-center">
-                    <i class="bi bi-envelope fs-1 text-primary me-3"></i>
+                    <i class="bi bi-telephone fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase mb-1">Call Us</h6>
                         <span>+012 345 6789</span>
@@ -19,9 +19,17 @@
                 </div>
             </div>
             <div class="col-lg-4 text-center bg-secondary py-3">
+               
                 <div class="d-inline-flex align-items-center justify-content-center">
-                    <a routerLink="/order-now" class="btn btn-primary border-inner py-3 px-5" style="margin-right: 20px;">Order Now</a>
-                    <a routerLink="/bakingenquiry" class="btn btn-primary border-inner py-3 px-5">Baking Class Enquiry</a>
+                    
+                    <i class="bi bi-file-text fs-1 text-primary me-2"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-0" style="font-size: 20px;">
+                            <a routerLink="/bakingenquiry" style="color: #333;">Baking Class Enquiry</a></h6>
+                    </div>
+                
+                    <!-- <a routerLink="/order-now" class="btn btn-primary border-inner py-3 px-5" style="margin-right: 20px;">Order Now</a>
+                    <a routerLink="/bakingenquiry" class="btn btn-primary border-inner py-3 px-5">Baking Class Enquiry</a> -->
                 </div>
             </div>
         </div>
@@ -44,6 +52,7 @@
                 <a routerLink="/menu" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Menu & Pricing</a>
                  <a routerLink="/team" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Master Chefs</a>
                  <a routerLink="/service" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Service</a>
+                 <a routerLink="/order-now" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Order Now</a>
                 <a routerLink="/bakingclass" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Baking Class</a>
                 <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Contact Us</a>
             </div>

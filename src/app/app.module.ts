@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BakingEnquiryComponent } from './baking-enquiry/baking-enquiry.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { BakingEnquiryComponent } from './baking-enquiry/baking-enquiry.componen
     OrderNowComponent,
     AdminDashboardComponent,
     BakingEnquiryComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,41 @@
+
+
+.product-gallery-carousel .owl-stage {
+  display: flex;
+}
+
+.product-gallery-carousel .owl-item {
+  display: flex;
+  height: 100%;
+}
+
+.product-item p {
+    height: 50px;
+}
+.product-gallery-carousel .product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 380px; /* Adjust as needed */
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.product-img-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Use 1 / 1 for square, or 16 / 9 for widescreen */
+  overflow: hidden;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
